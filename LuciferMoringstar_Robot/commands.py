@@ -81,7 +81,7 @@ async def start(bot: lucifermoringstar_robot, update):
 
     if len(update.command) != 2:
         pr0fess0r_99 = [[ InlineKeyboardButton("× 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ×", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                        [ InlineKeyboardButton("Support 💬", url=f"t.me/{SUPPORT}"), InlineKeyboardButton("UPDATES 📢", url="https://t.me/MalluCinemas_Official") ],
+                        [ InlineKeyboardButton("Support 💬", url=f"t.me/MC_Group1"), InlineKeyboardButton("UPDATES 📢", url="https://t.me/MalluCinemas_Official") ],
                         [ InlineKeyboardButton("Help ℹ️ ", callback_data="help"), InlineKeyboardButton("ABOUT 🤠", callback_data="about") ]] 
         await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
 
