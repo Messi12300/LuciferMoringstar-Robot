@@ -232,7 +232,7 @@ async def cb_handler(bot, update):
 
             FILE_CAPTION = settings["caption"]
             caption = FILE_CAPTION.format(mention=update.from_user.mention, file_name=title, size=size, caption=files.caption)
-            buttons = [[ InlineKeyboardButton("⚜️ 𝚂𝙷𝙰𝚁𝙴 𝙼𝙴 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁 𝙵𝚁𝙸𝙴𝙽𝙳𝚂 ⚜️", url=f"https://t.me/share/url?url=Best%20AutoFilter%20Bot%20%0A%40LuciferMoringstar_Robot%0A@{temp.Bot_Username}") ]]
+            buttons = [[ InlineKeyboardButton("⚜️ OUR CHANNEL  ⚜️", url=f"https://t.me/MalluCinemas_Official") ]]
             if settings["savefiles"]:
                 protect_content = True
             else:
@@ -293,7 +293,7 @@ async def cb_handler(bot, update):
             title = files.file_name
             size = get_size(files.file_size)
             caption = CUSTOM_FILE_CAPTION.format(mention=update.from_user.mention, file_name=title, size=size, caption=files.caption)
-            buttons = [[ InlineKeyboardButton("⚜️ 𝚂𝙷𝙰𝚁𝙴 𝙼𝙴 𝚆𝙸𝚃𝙷 𝚈𝙾𝚄𝚁 𝙵𝚁𝙸𝙴𝙽𝙳𝚂 ⚜️", url=f"https://t.me/share/url?url=Best%20AutoFilter%20Bot%20%0A%40LuciferMoringstar_Robot%0A@{temp.Bot_Username}") ]]
+            buttons = [[ InlineKeyboardButton("⚜️ OUR CHANNEL  ⚜️", url=f"https://t.me/MalluCinemas_Official}") ]]
             try:
                 await bot.send_cached_media(chat_id=update.from_user.id, file_id=file_id, caption=caption, reply_markup=InlineKeyboardMarkup(buttons), protect_content=SAVE_FILES)            
             except Exception as e:
@@ -305,8 +305,8 @@ async def cb_handler(bot, update):
               
         elif update.data == "start":
             buttons = [[ InlineKeyboardButton("× 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ×", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                      [ InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃 💬", url=f"t.me/{SUPPORT}"), InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚂 ♋", url="https://t.me/MalluCinemas_Official") ],
-                      [ InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿", callback_data="help"), InlineKeyboardButton("𝙰𝙱𝙾𝚄𝚃 😀", callback_data="about") ]] 
+                      [ InlineKeyboardButton("SUPPORT 💬", url=f"https://t.me/MC_Group1"), InlineKeyboardButton("UPDATES ♋", url="https://t.me/MalluCinemas_Official") ],
+                      [ InlineKeyboardButton("HELP ℹ️ ", callback_data="help"), InlineKeyboardButton("𝙰BOUT 😀", callback_data="about") ]] 
             await update.message.edit(START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(buttons))
 
         elif update.data == "help":
@@ -336,8 +336,8 @@ async def cb_handler(bot, update):
                 pass
         elif update.data == "about":
             try:
-                buttons = [[ InlineKeyboardButton("📦 𝚂𝙾𝚄𝚁𝙲𝙴 📦", url="https://github.com/PR0FESS0R-99/LuciferMoringstar-Robot")],
-                      [ InlineKeyboardButton("𝙷𝙾𝙼𝙴", callback_data="start"), InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴", callback_data="usage"), InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data="close") ]]                     
+                buttons = [[ InlineKeyboardButton("🍿 Our Channel 🍿", url="https://t.me/MalluCinemas_Official")],
+                      [ InlineKeyboardButton("𝙷𝙾𝙼𝙴", callback_data="start"), InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data="close") ]]                     
                 await update.message.edit(ABOUT_MESSAGE.format(name=CREATOR_NAME, username=CREATOR_USERNAME, py3_version=temp.PY3_VERSION, pyro_version=temp.PYRO_VERSION, version=temp.BOT_VERSION, source="https://github.com/PR0FESS0R-99/LuciferMoringstar-Robot"), reply_markup=InlineKeyboardMarkup(buttons))
             except MessageNotModified:
                 pass
