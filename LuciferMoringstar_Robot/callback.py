@@ -293,7 +293,7 @@ async def cb_handler(bot, update):
             title = files.file_name
             size = get_size(files.file_size)
             caption = CUSTOM_FILE_CAPTION.format(mention=update.from_user.mention, file_name=title, size=size, caption=files.caption)
-            buttons = [[ InlineKeyboardButton("⚜️ OUR CHANNEL  ⚜️", url=f"https://t.me/MalluCinemas_Official}") ]]
+            buttons = [[ InlineKeyboardButton("⚜️ OUR CHANNEL  ⚜️", url=f"https://t.me/MalluCinemas_Official") ]]
             try:
                 await bot.send_cached_media(chat_id=update.from_user.id, file_id=file_id, caption=caption, reply_markup=InlineKeyboardMarkup(buttons), protect_content=SAVE_FILES)            
             except Exception as e:
